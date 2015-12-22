@@ -1,0 +1,18 @@
+<h1>Hello</h1>
+
+<a href="/hello/world">Click</a>
+
+<% @users.each do |user|%>
+<a href=<%= "/delete/#{user.id}" %>>
+<strong> <%= user.first_name%> </strong><br>     
+<%= user.last_name%> <br>     
+<%= user.id %> <br>     
+<%= user.email%> <br>   <br>  
+</a>
+<%end %>
+
+
+<form action=<%= "/delete/" %> method="post">
+    <input name="_method" type="hidden" value="delete" />
+    <input name="_method" type="submit" />
+</form>
